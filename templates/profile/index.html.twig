@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-4xl">Welcome {{ identity.identity.traits.email }}</h1>
+    <p>member of {{ identity.identity.traits.company }}</p>
+    <p>Account is active ? {{ identity.active?"yes":"no" }}</p>
+    <p><a href="{{ path('auth_logout') }}">Logout</a></p>
+    {{ dump(identity) }}
+{% endblock %}
